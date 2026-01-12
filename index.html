@@ -9,14 +9,14 @@
 
     <meta property="og:title" content="Introduction to Computational Neuroscience and Biology | IIT (BHU)">
     <meta property="og:description" content="A short-term course covering Brain function, MRI/EEG Analysis, AI for Brain & Behavior, and RNA-seq workflows. Organized by IDAPT Hub & SBME.">
-    <meta property="og:image" content="https://cnbllab.github.io/cnbl_course/Social_banner.png">
-    <meta property="og:url" content="https://cnbllab.github.io/cnbl_course/">
+    <meta property="og:image" content="https://computationalneurosciencecourse.netlify.app/Social_banner.png">
+    <meta property="og:url" content="https://computationalneurosciencecourse.netlify.app">
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Introduction to Computational Neuroscience and Biology">
     <meta name="twitter:description" content="Join us at IIT (BHU) for a short-term course on Computational Neuroscience and AI. Feb 02-06, 2026.">
-    <meta name="twitter:image" content="https://cnbllab.github.io/cnbl_course/Social_banner.png">
+    <meta name="twitter:image" content="https://computationalneurosciencecourse.netlify.app/Social_banner.png">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -77,6 +77,9 @@
                 <a href="Brochure.pdf" download="Computational_Neuroscience_Brochure" class="btn btn-outline">
                     <i class="fas fa-download"></i> Download Brochure
                 </a>
+                <a href="Workshop Sheldule.pdf" download="Workshop_Schedule" class="btn btn-outline">
+                    <i class="fas fa-download"></i> Schedule
+                </a>
             </div>
         </div>
     </header>
@@ -111,30 +114,230 @@
         <div class="container">
             <h2 class="section-title">Course Highlights</h2>
             <div class="topics-grid">
+                
                 <div class="topic-item">
                     <i class="fas fa-brain"></i>
-                    <h4>Comp. Neuroscience</h4>
-                    <p>Brain function, seizures, sleep, emotion, and disease through multi-scale modeling.</p>
+                    <h4>Comp. Neuroscience & Oscillations</h4>
+                    <p>Computing with rhythms, trainable oscillatory neural networks, and brain function modeling.</p>
                 </div>
+
                 <div class="topic-item">
-                    <i class="fas fa-procedures"></i>
-                    <h4>MRI & EEG Analysis</h4>
-                    <p>Neural signal processing, brain connectivity, and cognitive state mapping.</p>
+                    <i class="fas fa-wave-square"></i> <h4>MRI, EEG & Graph Signals</h4>
+                    <p>Diagnostic MRI vowels/consonants, graph signal processing, and biometrics instrumentation.</p>
                 </div>
-                <div class="topic-item">
-                    <i class="fas fa-dna"></i>
-                    <h4>RNA-seq Workflows</h4>
-                    <p>Preprocessing, differential expression, and functional annotation.</p>
-                </div>
+
                 <div class="topic-item">
                     <i class="fas fa-robot"></i>
-                    <h4>AI for Brain & Behavior</h4>
-                    <p>Epilepsy, emotion, and sleep decoding from multimodal data.</p>
+                    <h4>AI for Healthcare</h4>
+                    <p>Deep learning for brain tumor diagnosis, seizure prediction, and inner speech decoding.</p>
                 </div>
+
                 <div class="topic-item">
-                    <i class="fas fa-pills"></i>
-                    <h4>Drug Repurposing</h4>
-                    <p>Systems-level linking of molecular signatures to therapies.</p>
+                    <i class="fas fa-microchip"></i> <h4>Neuromorphic & Smart Sensing</h4>
+                    <p>Neuromorphic signal processing, EMG sensing for prosthetics, and smart wearable solutions.</p>
+                </div>
+
+                <div class="topic-item">
+                    <i class="fas fa-heartbeat"></i> <h4>Clinical & Therapeutic Apps</h4>
+                    <p>Cancer research trends, adaptive stimulation, and cardiovascular diagnosis with ML.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="section">
+        <div class="container">
+            <h2 class="section-title">Program Schedule</h2>
+            
+            <div class="schedule-tabs">
+                <button class="tab-btn active" onclick="openDay(event, 'day1')">Day 1 (Feb 02)</button>
+                <button class="tab-btn" onclick="openDay(event, 'day2')">Day 2 (Feb 03)</button>
+                <button class="tab-btn" onclick="openDay(event, 'day3')">Day 3 (Feb 04)</button>
+                <button class="tab-btn" onclick="openDay(event, 'day4')">Day 4 (Feb 05)</button>
+                <button class="tab-btn" onclick="openDay(event, 'day5')">Day 5 (Feb 06)</button>
+            </div>
+
+            <div id="day1" class="tab-content" style="display: block;">
+                <div class="timeline-item">
+                    <div class="time">09:00 - 11:30</div>
+                    <div class="details">
+                        <h4>Registration & Inaugural Program</h4>
+                        <p>Physical Registration, Inauguration, and High Tea</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">11:30 - 12:30</div>
+                    <div class="details">
+                        <h4>R&D for the Nation from C-DAC</h4>
+                        <p class="speaker">Dr. Kalaiselvan A (CDAC Trivandrum)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">14:00 - 16:00</div>
+                    <div class="details">
+                        <h4>Inner Speech Decoding & Demo</h4>
+                        <p class="speaker">Er. Binu PJ & Er. Deepu SS (CDAC Trivandrum)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">16:20 - 17:00</div>
+                    <div class="details">
+                        <h4>Seizure Detection and Prediction</h4>
+                        <p class="speaker">Dr. Sudalaimani C (CDAC Trivandrum)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="day2" class="tab-content">
+                <div class="timeline-item">
+                    <div class="time">10:00 - 11:00</div>
+                    <div class="details">
+                        <h4>Clinical Anatomy of the Brain</h4>
+                        <p class="speaker">Dr. Nidhi Sunhare (AIIMS Patna)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">11:30 - 12:30</div>
+                    <div class="details">
+                        <h4>The Language of Diagnostic MRI</h4>
+                        <p class="speaker">Dr. Ashish Verma (IMS, BHU)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">14:00 - 15:00</div>
+                    <div class="details">
+                        <h4>EEG Instrumentation and Biometrics</h4>
+                        <p class="speaker">Dr. Jac Fredo AR (IIT (BHU) Varanasi)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">15:00 - 17:00</div>
+                    <div class="details">
+                        <h4>Demo on EEG, EMG, ECG Data Acquisition</h4>
+                        <p class="speaker">CNBL Lab (IIT (BHU) Varanasi)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="day3" class="tab-content">
+                <div class="timeline-item">
+                    <div class="time">10:00 - 11:00</div>
+                    <div class="details">
+                        <h4>Freezing of Gait: Smart Wear Solutions</h4>
+                        <p class="speaker">Prof. Uttama Lahiri (IIT Gandhinagar)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">11:30 - 12:30</div>
+                    <div class="details">
+                        <h4>Neuromorphic Signal Processing for Healthcare</h4>
+                        <p class="speaker">Dr. Deepesh Kumar (IIT (BHU) Varanasi)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">14:00 - 15:00</div>
+                    <div class="details">
+                        <h4>EMG Sensing: Prosthesis & Wearables</h4>
+                        <p class="speaker">Dr. Oppili Prasad (IIT (BHU) Varanasi)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">15:00 - 16:00</div>
+                    <div class="details">
+                        <h4>Trends in Contemporary Cancer Research</h4>
+                        <p class="speaker">Dr. Sabitha Ramanathan (Cancer Institute Adyar)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">16:20 - 17:00</div>
+                    <div class="details">
+                        <h4>AI & Physiology Driven Computational Models</h4>
+                        <p class="speaker">Dr. Pragathi Priyadharshini (IIT Kanpur)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="day4" class="tab-content">
+                <div class="timeline-item">
+                    <div class="time">10:00 - 11:00</div>
+                    <div class="details">
+                        <h4>Computing with Rhythms (Oscillatory NN)</h4>
+                        <p class="speaker">Prof. Srinivasan Chakravarthy (IIT Madras)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">11:30 - 12:30</div>
+                    <div class="details">
+                        <h4>Cardiovascular Diagnosis with ML/DL</h4>
+                        <p class="speaker">Prof. Samarendra Dandapat (IIT Guwahati)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">14:00 - 15:00</div>
+                    <div class="details">
+                        <h4>Automated Classification of Neurological Disorders</h4>
+                        <p class="speaker">Prof. Ram Bilas Pachori (IIT Indore)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">15:00 - 16:00</div>
+                    <div class="details">
+                        <h4>Graph Signal Processing for EEG</h4>
+                        <p class="speaker">Dr. Manikandan (IIT Palakkad)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">16:20 - 17:00</div>
+                    <div class="details">
+                        <h4>DL based Brain Tumor Diagnosis</h4>
+                        <p class="speaker">Dr. Maheshkumar H. Kolekar (IIT Patna)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="day5" class="tab-content">
+                <div class="timeline-item">
+                    <div class="time">10:00 - 11:00</div>
+                    <div class="details">
+                        <h4>From Neural Signals to Adaptive Stimulation</h4>
+                        <p class="speaker">Dr. Jithin Krishnan (SCTIMST Trivandrum)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">11:30 - 12:30</div>
+                    <div class="details">
+                        <h4>Neural Signal Processing for Epilepsy</h4>
+                        <p class="speaker">Dr. Karthick PA (NIT Trichy)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">14:00 - 15:00</div>
+                    <div class="details">
+                        <h4>AI-driven Multimodal Sensing</h4>
+                        <p class="speaker">Dr. Nagarajan Ganapathi (IIT Hyderabad)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">15:00 - 16:00</div>
+                    <div class="details">
+                        <h4>MR Image Analysis for Dementia</h4>
+                        <p class="speaker">Dr. Rohini Palanisamy (IIITDM Kancheepuram)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">16:20 - 17:00</div>
+                    <div class="details">
+                        <h4>Surface EMG Modelling and Analysis</h4>
+                        <p class="speaker">Prof. Venugopal G (NSS Palakkad)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">17:00 - 19:00</div>
+                    <div class="details">
+                        <h4>Closing Ceremony</h4>
+                        <p>Vote of Thanks, Group Picture, Discussion</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -415,6 +618,28 @@
                 document.getElementById("countdown-container").innerHTML = "<h3>Registration Closed</h3>";
             }
         }, 1000);
+    </script>
+
+    <script>
+        function openDay(evt, dayName) {
+            var i, tabcontent, tablinks;
+            
+            // Hide all tab content
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove "active" class from all buttons
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(dayName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
     </script>
 
 </body>
