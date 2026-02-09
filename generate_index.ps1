@@ -1,13 +1,13 @@
 # Script to generate certificates.js from the folder structure
 
 # Check if user pasted "Certificates" folder inside "certificates" folder
-if (Test-Path ".\certificates\Certificates") {
-    $rootPath = ".\certificates\Certificates"
-    $webRoot = "certificates/Certificates"
+if (Test-Path ".\Certificates\Certificates") {
+    $rootPath = ".\Certificates\Certificates"
+    $webRoot = "Certificates/Certificates"
 }
 else {
-    $rootPath = ".\certificates"
-    $webRoot = "certificates"
+    $rootPath = ".\Certificates"
+    $webRoot = "Certificates"
 }
 
 $outputFile = ".\certificates.js"
@@ -29,11 +29,14 @@ function Process-Directory ($dirName, $categoryName) {
         $files = Get-ChildItem -Path $dirPath -Filter *.pdf
         foreach ($file in $files) {
             $name = $file.BaseName
-            # Escape backslashes for JS strings and ensure forward slashes for URLs
-            $relativePath = "$webRoot/$dirName/" + $file.Name
+            # Encode spaces and special characters for URL
+            $encodedName = [Uri]::EscapeDataString($file.Name)
+            
+            $relativePath = "$webRoot/$dirName/$encodedName"
+            $fileName = $file.Name
             
             # Add to JS content
-            $global:jsContent += "    { name: `"$name`", category: `"$categoryName`", file: `"$relativePath`" },`n"
+            $script:jsContent += "    { name: `"$name`", category: `"$categoryName`", file: `"$relativePath`", fileName: `"$fileName`" },`n"
         }
         Write-Host "Processed $($files.Count) certificates in $categoryName" -ForegroundColor Green
     }
@@ -81,7 +84,7 @@ $jsContent += "            <div class=`"cert-info`">`n"
 $jsContent += "                <h4>`${person.name}</h4>`n"
 $jsContent += "                <span>`${person.category}</span>`n"
 $jsContent += "            </div>`n"
-$jsContent += "            <a href=`"`${person.file}`" download class=`"download-btn`">`n"
+$jsContent += "            <a href=`"`${person.file}`" download=`"`${person.fileName}`" class=`"download-btn`">`n"
 $jsContent += "                <i class=`"fas fa-download`"></i> Download`n"
 $jsContent += "            </a>`n"
 $jsContent += "        </div>`n"
