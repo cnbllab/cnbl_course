@@ -1,4 +1,4 @@
-﻿// Auto-generated certificate data
+// Auto-generated certificate data
 const participants = [
     { name: "Adrija Saha", category: "Offline Participant", file: "Certificates/Certificates/Offline_Partcipants/Adrija%20Saha.pdf", fileName: "Adrija Saha.pdf" },
     { name: "Ahana Singh", category: "Offline Participant", file: "Certificates/Certificates/Offline_Partcipants/Ahana%20Singh.pdf", fileName: "Ahana Singh.pdf" },
