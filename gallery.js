@@ -1,4 +1,4 @@
-﻿// Auto-generated gallery data
+// Auto-generated gallery data
 // Generated on 02/09/2026 16:38:45
 const galleryImages = [
     { src: "gallery/WhatsApp Image 2026-02-09 at 3.55.27 PM.jpeg", caption: "WhatsApp Image 2026-02-09 at 3.55.27 PM" },
