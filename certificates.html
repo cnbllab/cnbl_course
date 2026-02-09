@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Certificate | IDAPT Hub & SBME</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 15px 25px;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            outline: none;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        #searchInput:focus {
+            border-color: #3498db;
+            box-shadow: 0 5px 20px rgba(52, 152, 219, 0.2);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+            font-size: 1.2rem;
+        }
+
+        .certificate-list {
+            margin-top: 40px;
+            display: grid;
+            gap: 15px;
+        }
+
+        .cert-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 5px solid #3498db;
+            transition: transform 0.2s;
+        }
+
+        .cert-item:hover {
+            transform: translateX(5px);
+        }
+
+        .cert-info h4 {
+            margin: 0 0 5px;
+            color: #2c3e50;
+        }
+
+        .cert-info span {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            background: #f0f4f8;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .download-btn {
+            background: #e74c3c;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #c0392b;
+        }
+
+        .no-results {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 30px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-group">
+                <img src="logo-idapt.gif" alt="IDAPT Logo" class="nav-logo">
+                <img src="logo-iitbhu.gif" alt="IIT BHU Logo" class="nav-logo">
+                <div class="logo-text">
+                    <span class="main-text">IDAPT Hub & SBME</span>
+                    <span class="sub-text">IIT (BHU) Varanasi</span>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#topics">Curriculum</a></li>
+                <li><a href="certificates.html" class="highlight-link">Certificates</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" style="height: 50vh; min-height: 400px;">
+        <div class="overlay"></div>
+        <div class="container hero-content">
+            <h1>Download Your Certificate</h1>
+            <p class="subtitle">Search by your name to find and download your participation certificate.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 20px;">Workshop Highlights</h2>
+            <div class="carousel-container" style="margin-bottom: 40px;">
+                <div id="galleryTrack" class="carousel-track">
+                    <!-- Javascript will populate slides here -->
+                </div>
+
+                <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="carousel-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+
+                <div id="carouselDots" class="carousel-dots">
+                    <!-- Javascript will populate dots here -->
+                </div>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Enter your name to search...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+
+            <div id="resultsContainer" class="certificate-list">
+                <!-- Results will appear here -->
+                <p class="no-results">Start typing to search for your certificate...</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container footer-content">
+            <div class="contact-details">
+                <h3>Contact Us</h3>
+                <p><strong>Dr. Jac Fredo AR</strong><br>Coordinator, School of Biomedical Engineering</p>
+                <p>IIT (BHU), Varanasi - 221005</p>
+                <p>Email: <a href="mailto:jack.bme@itbhu.ac.in">jack.bme@itbhu.ac.in</a></p>
+            </div>
+            <div class="branding">
+                <p>&copy; 2026 IDAPT Hub Foundation - IIT (BHU). All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="certificates.js"></script>
+    <script src="gallery.js"></script>
+</body>
+
+</html>
